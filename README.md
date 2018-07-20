@@ -62,7 +62,31 @@
 ##### Compiling OpenCV on Ubuntu 18.04
     $ make -j4
 ##### Installing and verifying OpenCV
-
+    $ sudo make install
+    $ sudo ldconfig
+##### Verify the install, sometimes I like to enter the following command in the terminal:
+    $ pkg-config --modversion opencv
+    3.4.1    
+##### Finish your Python+ OpenCV + Ubuntu 18.04 install
+    $ ls /usr/local/lib/python3.6/site-packages/
+    cv2.cpython-36m-x86_64-linux-gnu.so   
+    $ cd /usr/local/lib/python3.6/site-packages/
+    $ sudo mv cv2.cpython-36m-x86_64-linux-gnu.so cv2.so
+##### OpenCV cv2.so  bindings into our cv  virtual environment:
+    $ cd ~/.virtualenvs/cv/lib/python3.6/site-packages/
+    $ ln -s /usr/local/lib/python3.6/site-packages/cv2.so cv2.so
+##### Testing your OpenCV install on Ubuntu 18.04
+    $ cd ~
+    $ workon cv
+    $ python         
+    Python 3.6.5 (default, Apr 1 2018, 05:46:30)
+    [GCC 7.3.0] on linux
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>> import cv2
+    >>> cv2.__version__
+    '3.4.1'
+    >>> quit()
+### We are successfully completed installed opencv    
 
 # Issue        
 ##### Issue on sudo apt-get update
