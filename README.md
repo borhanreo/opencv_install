@@ -62,9 +62,13 @@
 ##### Compiling OpenCV on Ubuntu 18.04
     $ make -j4
 ##### Installing and verifying OpenCV
-        
+
+
+# Issue        
 ##### Issue on sudo apt-get update
     $ sudo rm -r /etc/apt/sources.list.d
     $ sudo apt-get update
-    
-            
+##### Issue on push 
+      $ git config --global user.email "borhan.u.cse@gmail.com" 
+      $ git config --global user.email "borhan"
+      $ git push --set-upstream origin master      
