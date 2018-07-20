@@ -1,4 +1,4 @@
-#OPENCV Install on ubuntu 18.04
+# OPENCV Install on ubuntu 18.04
 ##### Check Python Version
     $ python3 --version
     Python 3.6.5
